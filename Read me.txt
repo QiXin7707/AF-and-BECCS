@@ -1,0 +1,9 @@
+1. "Fig1data.xIsx", "Fig2data.xlsx" and "Fig4data.xIsx" are the original data to create Fig.1, Fig.2 and Fig.4. 
+
+The data in"Fig1data.xIsx" are calculated from LCA results. 
+
+The data in"Fig2data.xIsx and Fig4data.xIsx  " are calculated from UVic results.
+
+2. "Fig3.txt" is the code to create Fig.3 by Pyferret from UVic results.
+
+3. "Updates.zip.” are the update codes in our UVic model.

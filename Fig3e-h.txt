@@ -1,0 +1,39 @@
+ ! NOAA/PMEL TMAP
+ ! PyFerret v7.63 (optimized)
+ ! Linux 5.11.0-1021-azure - 12/10/21
+ !  7-Nov-24 10:22     
+
+set mode verify
+use con.tavg.nc
+use b1.tavg.nc
+use b2.tavg.nc
+let a=l_vegcarb[d=2,l=1:70@ave*70,k=@din]
+let b=l_vegcarb[d=1,l=70,k=@din]
+let c=a-b
+sha/set/nolab/palette=centered_diff/lev=(-inf)(-10,10,1)(inf) c
+set text/font=Arial
+ppl shade
+cont/over/size=0.000001/lev=(0.5,0.5,1,-3)/nolab/color=black g_mskt
+let e=l_soilcarb[d=2,l=1:70@ave*70]
+let f=l_soilcarb[d=1,l=70]
+let g=e-f
+sha/set/nolab/palette=centered_diff/lev=(-inf)(-10,10,1)(inf) g
+set text/font=Arial
+ppl shade
+cont/over/size=0.000001/lev=(0.5,0.5,1,-3)/nolab/color=black g_mskt
+let h=l_vegcarb[d=3,l=1:70@ave*70,k=@din]
+let m=l_vegcarb[d=1,l=70,k=@din]
+let n=h-m
+sha/set/nolab/palette=centered_diff/lev=(-inf)(-10,10,1)(inf) n
+set text/font=Arial
+ppl shade
+cont/over/size=0.000001/lev=(0.5,0.5,1,-3)/nolab/color=black g_mskt
+let p=l_soilcarb[d=3,l=1:70@ave*70]
+let r=l_soilcarb[d=1,l=70]
+let s=p-r
+sha/set/nolab/palette=centered_diff/lev=(-inf)(-10,10,1)(inf) s
+set text/font=Arial
+ppl shade
+cont/over/size=0.000001/lev=(0.5,0.5,1,-3)/nolab/color=black g_mskt
+q
+
